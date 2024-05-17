@@ -1,0 +1,288 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.mainscreen
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginplatform
+{
+    height:100%;
+    width: 50%;
+    background-color: #F31E8A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formsection1
+{
+    width:60%;
+    height:70%;
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.formsection1 >input
+{
+    width: 70%;
+    height: 2vw;
+    font-size: medium;
+    text-align:center;
+    border: none;
+    border-radius: 10px;
+}
+
+#inputemail
+{
+    width:80%;
+}
+
+#submitbutton {
+    display: inline-block;
+    padding: 8px 17px;
+    border: 1px solid #4f4f4f;
+    border-radius: 10px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+    color: black;
+    z-index: 1;
+  }
+  
+  #submitbutton:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  #submitbutton:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color:maroon;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  #submitbutton:hover {
+    color: #ffffff;
+    border: 1px solid maroon;
+  }
+  
+  #submitbutton:hover:before {
+    top: -35%;
+    background-color: maroon;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  #submitbutton:hover:after {
+    top: -45%;
+    background-color: maroon;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+
+  .formsection2
+  {
+    width:60%;
+    height:70%;
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .otpsection
+  {
+    height: 70px;
+    width: 200px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .otpsection >input
+  {
+    height: 70%;
+    width: 15%;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    font-size: medium;
+  }
+
+  .formsection3
+  {
+    width:60%;
+    height:70%;
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formsection3 >input
+{
+    margin-top: 8px;
+    width: 70%;
+    height: 2vw;
+    font-size: medium;
+    text-align:center;
+    border: none;
+    border-radius: 10px;
+}
+
+.formsection4
+  {
+    width:65%;
+    height:70%;
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formsection4 >input
+{
+    margin-top: 8px;
+    width: 70%;
+    height: 2vw;
+    font-size: medium;
+    text-align:center;
+    border: none;
+    border-radius: 10px;
+}
+
+.formsection5
+  {
+    width:65%;
+    height:70%;
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formsection5 >input
+{
+    margin-top: 8px;
+    width: 70%;
+    height: 2vw;
+    font-size: medium;
+    text-align:center;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+
+
+.loginimages
+{
+    height:100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitbutforlogin {
+    --bg: #000;
+    --hover-bg: #8E0C2C;
+    --hover-text: white;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    width: 70px;
+    height: 30px;
+    background: var(--bg);
+    transition: 0.2s;
+  }
+  
+  .submitbutforlogin:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .submitbutforlogin:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  

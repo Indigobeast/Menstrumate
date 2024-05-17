@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../CSS/Login/logincss.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainscreen">
+        <div class="loginplatform">
+
+            <div class="formsection1">
+                <h2 style="text-align: center;font-weight: 200;">Enter your name</h2>
+                <input type="text" placeholder="Enter your name" id="inputname">
+                <h2 style="text-align: center;font-weight: 200;">Enter your Phone number</h2>
+                <input type="number" placeholder="Enter your mobile number" id="inputmobno">
+                <h2 style="text-align: center;font-weight: 200;">Enter your Email Id</h2>
+                <input type="email" placeholder="Enter your email" id="inputemail">
+                <button class="submitbutforlogin" type="submit" value="submit" id="submitbutton1">Submit</button>
+            </div> 
+
+             <div class="formsection2" style="display: none;" >
+                <h4 style="text-align: center;font-weight: 200;">We have sent a verification code to your mobile number and email id.</h4>
+                <h3 style="text-align: center;font-weight: 300;margin-top: 10px;">Kindly enter it.</h3>
+                <div class="otpsection">
+                    <input type="number" placeholder="-" id="inputotpspace1">
+                    <input type="number" placeholder="-" id="inputotpspace2">
+                    <input type="number" placeholder="-" id="inputotpspace3">
+                    <input type="number" placeholder="-" id="inputotpspace4">
+                </div> 
+                <button class="submitbutforlogin" type="submit" value="submit" id="submitbutton2" style="margin-top: 15px;">Verify</button>
+            </div>
+
+             <div class="formsection3" style="display: none;">
+                <h2 style="text-align: center;font-weight: 200;">Enter your Age</h2>
+                <input type="number" placeholder="eg. 17" id="inputage">
+                <button class="submitbutforlogin" type="submit" value="submit" id="submitbutton3" style="margin-top: 15px;">Submit</button>
+            </div> 
+
+             <div class="formsection4" style="display: none;">
+                <h2 style="text-align: center;font-weight: 200;margin-left: 8px;margin-right: 8px;">What is the no of days one cycle of your period continues?</h2>
+                <input type="number" placeholder="eg.28" id="inputmonthdays">
+                <h2 style="text-align: center;font-weight: 200;margin-left: 8px;margin-right: 8px; margin-top: 20px;">No of days your period continues or exists for?</h2>
+                <input type="number" placeholder="eg.7" id="inputweekdays">
+                <button class="submitbutforlogin" type="submit" value="submit" id="submitbutton4" style="margin-top: 15px;">Submit</button>
+                <h6 style="font-weight: 400;text-align: center;margin-top: 20px;">Note that these values will be changed according to your future cycles and can be edited anytime.</h6>
+            </div>
+
+            <div class="formsection5" style="display: none;">
+                <h2 style="text-align: center;font-weight: 200;">Date of the last period occurence?</h2>
+                <input type="date" placeholder="eg. 12-04-2003" id="inputdate">
+                <button class="submitbutforlogin" type="submit" value="submit" id="submitbutton5" style="margin-top: 25px;">Submit</button>
+            </div>
+
+            <div class="finalscreen" id="finalscreen" style="display: none;">
+                <h1>Thanks For Co-operation</h1>
+                <a href="#" class="gotodashboard"></a>
+            </div>
+        </div>
+        <div class="loginimages">
+                <img src="../../Assets/pngs/Login/backgroundforlogin.png" alt="" style="height: 90%;overflow: hidden;object-fit: cover;">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../JavaScript/Login/loginjs.js"></script>
+
+    <!-- <script src="webj.js"></script> -->
+</body>
+</html>

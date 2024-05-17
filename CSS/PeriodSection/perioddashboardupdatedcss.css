@@ -1,0 +1,315 @@
+.main-body{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.infopart
+{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.functionsgrp
+{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.progress-bar
+{
+
+    height: 270px;
+    width: 270px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out ;
+    background: conic-gradient(maroon 286deg,#fff 0deg) ;  }
+
+.circleinfo
+{
+    background: linear-gradient(180deg, #F50182 0%, #840D24 100%);
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 50px;
+
+}
+
+.otherinfo
+{
+    height: 80%;
+    width: 60%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.symptomstab
+{
+    background-size: cover;
+    height: 100%;
+    width: 26%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.symptomstab {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .card {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    border:0;
+    perspective: 150em;
+  }
+  
+  .card__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 30px;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all .6s ease;
+  }
+  
+  .card__side--front {
+    background-color: yellow;
+    border-radius: 30px;
+    border: solid 5px #AF0848;
+  }
+  
+  .card__side--back {
+    color: #FFF;
+    transform: rotateY(180deg);
+  }
+  
+  .card__side--back-1 {
+    background-color: red;
+    border-radius: 30px;
+    border: solid 5px #AF0848;
+  }
+  
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg);
+  }
+  
+  .card:hover .card__side--back {
+    transform: rotateY(0deg);
+  }
+  
+  .card__description {
+    text-transform: uppercase;
+    font-size: 5em;
+    padding: 1em 0;
+  }
+
+
+
+.feeedbackanddate
+{
+    height: 100%;
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zonetab
+{
+    height: 100%;
+    width: 26%;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.feeedbackanddate >div
+{
+    height: 47%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.getnext
+{
+    background: linear-gradient(#FF0046,#B70233);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.getnext > .lodgelevelbtn
+{
+    width:90px;
+    --bg: white;
+    --hover-bg: #8E0C2C;
+    --hover-text: white;
+    color: black;
+
+}
+
+.feedbackform
+{
+    border: solid 5px #AF0848;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zonetab
+{
+    border: solid 5px #AF0848;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.functionsgrp > .circlebtn > .circleinfo
+{
+    width: 140px;
+    height:140px;
+    margin-right: 0;
+}
+
+.functionsgrp > .circlebtn > .circleinfo >img
+{
+    height: 90px;
+    width: 90px;
+}
+
+.circlebtn
+{
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.circlebtn:hover
+{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+
+
+.circleinfo >h4
+{
+    margin-bottom: 0;
+    font-weight: 100;
+}
+
+.circleinfo >h1
+{
+    margin-top: 0;
+}
+.circular-progress{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: conic-gradient(#FFFFFF 3.6deg, #8E0C2C 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 290px;
+    width: 290px;
+    border-radius: 100%;
+    backdrop-filter: blur(1000px);
+}
+.circular-progress .progress-most-top {
+    position: absolute;
+    top: 10px;padding: 20px;
+    display: flex;flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    border-radius: 50%;
+    background : linear-gradient(#F50182,#840D24);
+    z-index: 1;
+}
+.heading{
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 48.41px;
+    text-align: center;color: #FFFFFF;
+
+}
+.sub-heading{
+    font-family: Inter;
+    font-size: 30px;color: #FFFFFF;
+    font-weight: 400;
+    line-height: 48.41px;
+    text-align: center;
+
+}
+.thumb {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.lodgelevelbtn {
+    --bg: #000;
+    --hover-bg: #8E0C2C;
+    --hover-text: white;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    width: 70px;
+    height: 30px;
+    background: var(--bg);
+    transition: 0.2s;
+  }
+  
+  .lodgelevelbtn:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .lodgelevelbtn:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+  

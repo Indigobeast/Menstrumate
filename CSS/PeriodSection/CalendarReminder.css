@@ -1,0 +1,247 @@
+/*author  - Satwik Kar*/
+
+
+.nav-heading-color-side {
+    color: #000000;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.main-container {
+
+    margin-top: 60px;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    height: 90vh;
+
+
+}
+
+.calendar {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.calendar th,
+.calendar td {
+
+    padding: 5px;
+    text-align: center;;
+}
+
+thead {
+
+    min-height: 90px;
+    min-width: 90px;
+
+    font-family: Inter;
+    font-size: 2vw;
+    font-weight: 700;
+    line-height: 3vw;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+
+
+.carouselStyle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left-child {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.right-child {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.prev-btn-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.next-btn-div {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.month-name {
+    text-align: center;
+}
+
+.prev-btn-div:hover {
+    cursor: pointer;
+
+    .prev-btn {
+        height: 80px;
+    }
+}
+
+.next-btn-div:hover {
+    cursor: pointer;
+
+    .next-btn {
+        height: 80px;
+    }
+}
+
+.carouselDiv {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center
+}
+
+.calendarDay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.calendarDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 24px;
+    background-color: #D9D9D9;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+
+}
+
+@keyframes bubbleAnimation {
+    0% {
+        transform: translateY(-40px) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(20px) scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.blood-div {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    color: white;
+    background-image: url("../../Assets/svgs/PeriodSection/drop-blood.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: bubbleAnimation 0.5s ease-out forwards;
+}
+
+.calendarDateParentDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left-child-background, .right-child-background {
+    display: flex;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    height: 70px;
+    width: 70px;
+
+    background-color: #eaebeb;
+}
+
+.btn-got-periods {
+    background: linear-gradient(184.26deg, #FF008A 3.46%, #6C1010 96.54%);
+    margin-bottom: 20px;
+    border: none;
+    justify-self: end;
+    padding-inline: 25px;
+    scale: 1;
+    color: #ffffff;
+    border-radius: 50px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+
+.back-btn {
+    background: linear-gradient(184.26deg, #FF008A 3.46%, #6C1010 96.54%);
+
+
+    border: none;
+    padding-inline: 25px;
+    scale: 1;
+    color: #ffffff;
+    border-radius: 50px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+
