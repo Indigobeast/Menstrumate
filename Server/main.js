@@ -53,7 +53,7 @@ app.post('/save-signup-data', async (req, res) => {
   })
 
   newDate.save()
-    .then(() =>getComputedStyle() console.log("Dates saved"))
+    .then(() => console.log("Dates saved"))
     .catch(err => res.json({ success: true, message: "Date Didn't Saved ", Error: err }));
 
   const newData = new periodDashboard({
