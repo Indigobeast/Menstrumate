@@ -3,6 +3,8 @@
  */
 
 
+
+
 export const TRAININGS  = [
 
         {

@@ -24,51 +24,33 @@ app.use(bodyParser.json())
 
 
 app.post('/save-signup-data', async (req, res) => {
-  const data = req.body;
-  let email = data.email
+  const { name, email, age, phone_num, date, month_days, week_days } = req.body;
+  console.log(name, email, age, phone_num, date, month_days, week_days)
 
+  try {
+    // Check for existing user
+    const existingUser = await periodUser.findOne({ email });
+    if (existingUser) {
+      return res.json({ message: "User Already Exists", success: false });
+    }
 
-  const check = await periodUser.findOne({ email })
+    // Create user and period data sequentially
+    const newUser = new periodUser({ name, email, age, phone_num });
+    await newUser.save(); // Save user
 
-  if (check != null) {
-    return res.json({ message: "User Already Exists ", success: false })
+    const newDate = new periodDate({ email, dates: [date], month_days, week_days });
+    await newDate.save(); // Save period data
+
+    const newData = new periodDashboard({ email, week_days });
+    await newData.save(); // Save dashboard data
+
+    res.json({ success: true, message: "Data Saved Successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: "Error saving data" });
   }
-
-  const newUser = new periodUser({
-    name: data.name,
-    age: data.age,
-    email: data.email,
-    phone_num: data.phoneNo
-  })
-
-  newUser.save()
-    .then(() => console.log("User Saved"))
-    .catch(err => res.json({ success: true, message: "Data Didn't Saved ", Error: err }));
-
-  const newDate = new periodDate({
-    email: data.email,
-    dates: [data.date],
-    month_days: data.monthDays,
-    week_days: data.weekDays
-  })
-
-  newDate.save()
-    .then(() => console.log("Dates saved"))
-    .catch(err => res.json({ success: true, message: "Date Didn't Saved ", Error: err }));
-
-  const newData = new periodDashboard({
-    email: data.email,
-    week_days: data.weekDays,
-  })
-
-  newData.save()
-    .then(() => console.log("Dashboard Data saved"))
-    .catch(err => res.json({ success: true, message: "Data Didn't Saved ", Error: err }));
-
-
-
-  res.json({ success: true, message: "Data Saved Successfully" })
 });
+
 
 
 app.get('/get-user-data', async (req, res) => {

@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const color_lst = ["#BE0000", "#BE0000", "#CAC221", "#4BB080", "#4BB080", "#4BB080", "#CAC221", "#BE0000", "#BE0000"];
     const date_idx = Math.floor(color_lst.length / 2);
-    const date = 13;  //Get date from database
+
+    const date = 19;  //Get date from database
 
     const all_dates = [];
     for (let i = 0; i < month_lst.length; i++) {
@@ -112,6 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    console.log(Calendar)
+
 
     let calenderDiv = document.querySelector(".carousel-inner")
     let mainDiv = document.createElement("div")
@@ -150,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     count++
                     tbody += `<td><div class="calendarDateParentDiv"></div></td>`
                     if (chk_month === 2) { // 2 for current month ....
+
                         lst.push(0)
                     }
 
@@ -328,7 +332,7 @@ document.addEventListener("DOMContentLoaded", function () {
             got_period(dateList);
             got_periods_btn.textContent = "Get Period Insights"
         } else {
-            console.log("clicked")
+
             location.href="perioddashboardupdated.html"
 
 
@@ -344,6 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let backgroundColor=color_lst[currentDateIdx]
         let email=localStorage.getItem("email")
         let date = 0;
+
         while (date < currentDateIdx) {
             const div = document.getElementById(listOfDates[date]);
             div.style = null
@@ -352,6 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         while (date < listOfDates.length) {
+            console.log(listOfDates)
             const div = document.getElementById(listOfDates[date]);
 
             if (div) {
@@ -374,6 +380,7 @@ document.addEventListener("DOMContentLoaded", function () {
             email: email,
             color:backgroundColor
         }
+        console.log(data)
 
         const response = await fetch('http://localhost:3000/set-period-data', {
             method: 'PATCH',

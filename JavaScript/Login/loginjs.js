@@ -1,6 +1,7 @@
 async function saveLoginData(data) {
 
     try {
+        console.log(data)
         const response = await fetch('http://localhost:3000/save-signup-data', {
             method: 'POST',
             headers: {
@@ -9,21 +10,17 @@ async function saveLoginData(data) {
             body: JSON.stringify(data)
         });
 
-        // if (!response.ok) {
-        // throw new Error(`API call failed with status ${response.status}`);
-        // }
-
 
         const responseData = await response.json();
         console.log('Signup data saved successfully:', responseData);
         if (responseData.success === false) {
             alert("User already exists")
-            location.href = "loginhtml.html"
+            location.href = '../../HTML/Login/loginhtml.html'
         }
         else {
 
             alert("User data saved")
-            location.href = "../../HTML/PeriodSection/CalendarReminder.html"
+            location.href = '../../HTML/LandingPage/index.html'
         }
 
     } catch (error) {
@@ -44,7 +41,7 @@ function submitHandler1(event) {
     console.log("Email:", email);
 
     dataObj.name = name;
-    dataObj.phoneNo = phoneNumber;
+    dataObj.phone_num = phoneNumber;
     dataObj.email = email
 
 
@@ -101,15 +98,15 @@ function submitHandler3(event) {
 function submitHandler4(event) {
     event.preventDefault();
 
-    const monthDays = document.getElementById("inputmonthdays").value.trim();
-    const weekDays = document.getElementById("inputweekdays").value.trim();
+    const month_days = document.getElementById("inputmonthdays").value.trim();
+    const week_days = document.getElementById("inputweekdays").value.trim();
 
 
-    console.log("Month-Days", monthDays);
-    console.log("Week-Days", weekDays);
+    console.log("Month-Days", month_days);
+    console.log("Week-Days", week_days);
 
-    dataObj.monthDays = monthDays;
-    dataObj.weekDays = weekDays;
+    dataObj.month_days = month_days;
+    dataObj.week_days = week_days;
 
     const form4 = document.getElementById("submitbutton4").parentElement;
     form4.style.display = "none";
