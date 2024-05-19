@@ -1,0 +1,64 @@
+body{
+    background-color:white;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    flex-direction: column;
+}
+.heading{
+     font-size: 55px;
+    margin-bottom: 10%;color: black;
+}
+.card-element-views{
+    flex:1;
+
+    align-self: center;text-align: center;
+}
+.consult-btn{margin-top: 50%;
+    border-radius: 20px;border:none;background-color: #c9c121;padding: 10px;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+}
+.item{
+    position: absolute;
+    width: 200px;
+    height: 320px;
+    text-align: justify;
+    background-color: #8d0d0d;
+    border-radius: 40px;
+    padding: 20px;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    left: calc(50% - 110px);
+    top: 0;
+}
+.card-element-name{
+    color: white;
+}
+.card-element-desc{
+    color: white;
+
+}
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 400px;
+}
+#next{
+    left: unset;
+    right: 400px;
+}
